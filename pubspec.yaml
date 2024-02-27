@@ -44,6 +44,8 @@ dependencies:
   #--- For Responsive Design ---
   flutter_screenutil: ^5.7.0
   flutter_animation_progress_bar: ^2.3.1
+  percent_indicator: ^4.2.3
+
   #--- For SVG Assets Rendering ---
   flutter_svg:
   flutter_spinkit: ^5.2.0

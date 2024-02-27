@@ -7,8 +7,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../custom_widgets/custom_app_bar.dart';
+import 'components/book_your_ebike.dart';
 import 'components/category_section.dart';
 import 'components/much_more_section.dart';
+import 'components/our_partners.dart';
+import 'components/progress_section.dart';
 import 'logic.dart';
 
 class HomePage extends StatelessWidget {
@@ -37,7 +40,7 @@ class HomePage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(
                   horizontal: pageMarginHorizontal / 1.2,
-                  vertical: pageMarginVertical / 2),
+                  vertical: pageMarginVertical),
               child: Text(
                 "RENDE LE TUE ESPERIENZE INDIMENTICABILI",
                 style: context.text.bodyMedium?.copyWith(
@@ -84,8 +87,11 @@ class HomePage extends StatelessWidget {
               ),
             ),
             // 10.heightBox,
-            const MuchMoreSection(),
+            MuchMoreSection(),
             const CategorySection(),
+            BookEbikeSection(),
+            const ProgressSection(),
+            const PartnersSection(),
           ],
         ),
       ),

@@ -36,15 +36,15 @@ class BottomNavItem extends StatelessWidget {
           children: [
             logic.currentPageIndex.value == indexValue
                 ? SvgPicture.asset(inActiveIcon,
-                    color: AppColors.bottomIconColor, height: 22.h)
+                    color: AppColors.subTitleColor, height: 20.h)
                 : SvgPicture.asset(inActiveIcon,
-                    color: Color(0xffAEAEB2), height: 22.h),
+                    color: Color(0xffAEAEB2), height: 20.h),
             2.heightBox,
             logic.currentPageIndex.value == indexValue
                 ? Text(
                     title,
                     style: context.text.bodySmall
-                        ?.copyWith(color: AppColors.bottomIconColor),
+                        ?.copyWith(color: AppColors.subTitleColor),
                   )
                 : Text(
                     title,

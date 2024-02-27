@@ -5,12 +5,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../utils/constants/assets.dart';
 import '../../utils/constants/colors.dart';
+import '../attractions/view.dart';
+import '../culture/view.dart';
 import '../home/view.dart';
+import '../routes/view.dart';
 import 'components/bottom_menu_item.dart';
 import 'logic.dart';
 
 class BottomNavBarPage extends StatefulWidget {
-  BottomNavBarPage({Key? key}) : super(key: key);
+  const BottomNavBarPage({Key? key}) : super(key: key);
 
   @override
   State<BottomNavBarPage> createState() => _BottomNavBarPageState();
@@ -35,9 +38,9 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
             index: logic.currentPageIndex.value,
             children: [
               HomePage(),
-              HomePage(),
-              HomePage(),
-              HomePage(),
+              AttractionsPage(),
+              CulturePage(),
+              RoutesPage(),
             ],
           ),
           bottomNavigationBar: SafeArea(

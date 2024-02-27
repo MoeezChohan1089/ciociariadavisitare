@@ -1,20 +1,42 @@
+import 'package:ciociariadavisitare/src/module/bottom_navigation/logic.dart';
 import 'package:ciociariadavisitare/src/utils/constants/assets.dart';
 import 'package:ciociariadavisitare/src/utils/constants/colors.dart';
 import 'package:ciociariadavisitare/src/utils/constants/margins_spacnings.dart';
 import 'package:ciociariadavisitare/src/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class MuchMoreSection extends StatelessWidget {
-  const MuchMoreSection({super.key});
+  MuchMoreSection({super.key});
+
+  final logic = Get.put(BottomNavigationLogic());
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        customImageStack(context, Assets.images.waterManImage, "ATTRAZIONI"),
-        customImageStack(context, Assets.images.mountainManImage, "PERCORSI"),
-        customImageStack(context, Assets.images.historicalImage, "CULTURA"),
+        GestureDetector(
+          onTap: () {
+            logic.currentPageIndex.value = 1;
+          },
+          child: customImageStack(
+              context, Assets.images.waterManImage, "ATTRAZIONI"),
+        ),
+        GestureDetector(
+          onTap: () {
+            logic.currentPageIndex.value = 3;
+          },
+          child: customImageStack(
+              context, Assets.images.mountainManImage, "PERCORSI"),
+        ),
+        GestureDetector(
+          onTap: () {
+            logic.currentPageIndex.value = 2;
+          },
+          child: customImageStack(
+              context, Assets.images.historicalImage, "CULTURA"),
+        ),
       ],
     );
   }

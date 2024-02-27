@@ -24,6 +24,36 @@ class _ImageAssets {
   final String mountainImage = "assets/images/img74.png";
   final String campingImage = "assets/images/img75.png";
   final String routesImage = "assets/images/rap-2.png";
+  final String lagoImage = "assets/images/lago.webp";
+  final String cioImage = "assets/images/cio.webp";
+  final String imageImage = "assets/images/image.jpeg";
+  final String partnerImage = "assets/images/partner1.jpeg";
+  final String partner1Image = "assets/images/partner2.jpeg";
+  final String partner2Image = "assets/images/partner3.jpeg";
+  final String partner3Image = "assets/images/partner4.jpeg";
+  final String attractionImage = "assets/images/attraction.jpeg";
+  final String attraction1Image = "assets/images/attraction1.jpeg";
+  final String attraction2Image = "assets/images/attraction2.jpeg";
+  final String attraction3Image = "assets/images/attraction3.jpeg";
+  final String attraction4Image = "assets/images/attraction3.png";
+  final String attraction5Image = "assets/images/attraction4.jpeg";
+  final String attraction6Image = "assets/images/attraction5.jpeg";
+  final String attraction7Image = "assets/images/attraction6.jpeg";
+  final String attraction8Image = "assets/images/attraction7.png";
+  final String cultureImage = "assets/images/culture.jpg";
+  final String culture1Image = "assets/images/culture1.jpeg";
+  final String culture2Image = "assets/images/culture2.jpeg";
+  final String culture3Image = "assets/images/culture3.jpeg";
+  final String culture4Image = "assets/images/culture4.jpeg";
+  final String culture5Image = "assets/images/culture5.jpeg";
+  final String routeImage = "assets/images/routes.jpeg";
+  final String route1Image = "assets/images/routes1.jpeg";
+  final String route2Image = "assets/images/routes2.jpeg";
+  final String route3Image = "assets/images/routes3.jpeg";
+  final String route4Image = "assets/images/routes4.jpeg";
+  final String route5Image = "assets/images/routes5.jpeg";
+  final String route6Image = "assets/images/routes6.jpeg";
+  final String route7Image = "assets/images/routes7.jpeg";
 }
 
 //
@@ -45,10 +75,10 @@ class _IconAssets {
   final String compulsoryRoadSign = "assets/icons/Compulsory Road Signs.svg";
   final String constructionRoadSign =
       "assets/icons/Construction Road Signs.svg";
-  final String trafficSignIcon = "assets/icons/Group 3.svg";
-  final String trafficRulesIcon = "assets/icons/Group 5.svg";
-  final String trafficTestIcon = "assets/icons/Group 7.svg";
-  final String trafficGraphIcon = "assets/icons/Group 95.svg";
+  final String trafficSignIcon = "assets/icons/Group 2.svg";
+  final String trafficRulesIcon = "assets/icons/Group 21.svg";
+  final String trafficTestIcon = "assets/icons/Group 22.svg";
+  final String trafficGraphIcon = "assets/icons/Group 23.svg";
   final String congragIcon = "assets/icons/Group 129.svg";
   final String informationRoadIcon = "assets/icons/Information Road Signs.svg";
   final String instructionIcon = "assets/icons/Instructions.svg";

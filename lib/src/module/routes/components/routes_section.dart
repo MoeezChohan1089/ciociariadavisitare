@@ -4,6 +4,16 @@ import 'package:ciociariadavisitare/src/utils/constants/margins_spacnings.dart';
 import 'package:ciociariadavisitare/src/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+
+import '../../details/routes/routes1.dart';
+import '../../details/routes/routes2.dart';
+import '../../details/routes/routes3.dart';
+import '../../details/routes/routes4.dart';
+import '../../details/routes/routes5.dart';
+import '../../details/routes/routes6.dart';
+import '../../details/routes/routes7.dart';
+import '../../details/routes/routes8.dart';
 
 class RoutesSection extends StatelessWidget {
   const RoutesSection({super.key});
@@ -12,22 +22,94 @@ class RoutesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        customImageStack(context, Assets.images.routeImage,
-            "Cammino Di San Benedetto", "SUBIACO"),
-        customImageStack(
-            context, Assets.images.route1Image, "Capo Rio", "COLLEPARDO"),
-        customImageStack(
-            context, Assets.images.route2Image, "Monte Monna", "CAMPO CATINO"),
-        customImageStack(
-            context, Assets.images.route3Image, "Monte Cacume", "PATRICA"),
-        customImageStack(
-            context, Assets.images.route4Image, "Le Mura Ciclopiche", "ALATRI"),
-        customImageStack(
-            context, Assets.images.route5Image, "Castello San Catasto", "SORA"),
-        customImageStack(context, Assets.images.route6Image, "Pizzo Deta",
-            "PRATO DI CAMPOLI"),
-        customImageStack(context, Assets.images.route7Image, "Gole Del Lacerno",
-            "PESCOSOLIDO"),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                RouteOneDetailScreen(
+                  imageUrl: Assets.images.routeDetailImage,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageStack(context, Assets.images.routeImage,
+              "Cammino Di San Benedetto", "SUBIACO"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                RouteTwoDetailScreen(
+                  imageUrl: Assets.images.route1Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageStack(
+              context, Assets.images.route1Image, "Capo Rio", "COLLEPARDO"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                RouteThreeDetailScreen(
+                  imageUrl: Assets.images.routeDetail1Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageStack(context, Assets.images.route2Image,
+              "Monte Monna", "CAMPO CATINO"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                RouteFourDetailScreen(
+                  imageUrl: Assets.images.route3Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageStack(
+              context, Assets.images.route3Image, "Monte Cacume", "PATRICA"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                RouteFiveDetailScreen(
+                  imageUrl: Assets.images.routeDetail2Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageStack(context, Assets.images.route4Image,
+              "Le Mura Ciclopiche", "ALATRI"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                RouteSixDetailScreen(
+                  imageUrl: Assets.images.route5Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageStack(context, Assets.images.route5Image,
+              "Castello San Catasto", "SORA"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                RouteSevenDetailScreen(
+                  imageUrl: Assets.images.routeDetail3Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageStack(context, Assets.images.route6Image,
+              "Pizzo Deta", "PRATO DI CAMPOLI"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                RouteEightDetailScreen(
+                  imageUrl: Assets.images.routeDetail4Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageStack(context, Assets.images.route7Image,
+              "Gole Del Lacerno", "PESCOSOLIDO"),
+        )
       ],
     );
   }

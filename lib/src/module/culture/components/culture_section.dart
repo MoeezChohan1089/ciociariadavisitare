@@ -1,9 +1,17 @@
+import 'package:ciociariadavisitare/src/module/details/culture/culture1.dart';
+import 'package:ciociariadavisitare/src/module/details/culture/culture2.dart';
 import 'package:ciociariadavisitare/src/utils/constants/assets.dart';
 import 'package:ciociariadavisitare/src/utils/constants/colors.dart';
 import 'package:ciociariadavisitare/src/utils/constants/margins_spacnings.dart';
 import 'package:ciociariadavisitare/src/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+
+import '../../details/culture/culture3.dart';
+import '../../details/culture/culture4.dart';
+import '../../details/culture/culture5.dart';
+import '../../details/culture/culture6.dart';
 
 class CultureSection extends StatelessWidget {
   const CultureSection({super.key});
@@ -12,48 +20,102 @@ class CultureSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        customImageAdventureStack(
-            context,
-            Assets.images.cultureImage,
-            "Casa Museo Tommaso Gismondi",
-            "Attualmente chiuso",
-            "Anagni",
-            "Casa Museo Tommaso Gismondi: Un Viaggio nell’Arte e Nell’Anima di Anagni"),
-        customImageAdventureStack(
-            context,
-            Assets.images.culture1Image,
-            "Museo Académie Vitti",
-            "9:00 / 12:30",
-            "Atina",
-            "Esplora l’Arte e la Cultura presso il Museo Académie Vitti ad Atina"),
-        customImageAdventureStack(
-            context,
-            Assets.images.culture2Image,
-            "Museo Archeologico Ernico",
-            "9:00 / 12:30",
-            "Anagni",
-            "Museo Archeologico Ernico: Un Viaggio nel Passato di Anagni"),
-        customImageAdventureStack(
-            context,
-            Assets.images.culture3Image,
-            "Museo della Cattedrale Di Anagni",
-            "9:00 / 18:00",
-            "Anagni",
-            "Tesori d’Arte e Fede: Esplora il Museo della Cattedrale di Anagni"),
-        customImageAdventureStack(
-            context,
-            Assets.images.culture4Image,
-            "Museo Della Civiltà Contadina E dell'Ulivo",
-            "9:00 / 18:00",
-            "Pastena",
-            "Scopri le Radici Rurali e l’Eredità dell’Ulivo al Museo della Civiltà Contadina e dell’Ulivo a Pastena"),
-        customImageAdventureStack(
-            context,
-            Assets.images.culture5Image,
-            "Museo Gente di Ciociaria",
-            "Attualmente Chiuso",
-            "Arce",
-            "Dalle Radici Agli Orizzonti: Scopri il Museo Gente di Ciociaria e la Vita nel Basso Lazio"),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                CultureOneDetailScreen(
+                  imageUrl: Assets.images.cultureImage,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageAdventureStack(
+              context,
+              Assets.images.cultureImage,
+              "Casa Museo Tommaso Gismondi",
+              "Attualmente chiuso",
+              "Anagni",
+              "Casa Museo Tommaso Gismondi: Un Viaggio nell’Arte e Nell’Anima di Anagni"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                CultureTwoDetailScreen(
+                  imageUrl: Assets.images.culture1Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageAdventureStack(
+              context,
+              Assets.images.culture1Image,
+              "Museo Académie Vitti",
+              "9:00 / 12:30",
+              "Atina",
+              "Esplora l’Arte e la Cultura presso il Museo Académie Vitti ad Atina"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                CultureThreeDetailScreen(
+                  imageUrl: Assets.images.culture2Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageAdventureStack(
+              context,
+              Assets.images.culture2Image,
+              "Museo Archeologico Ernico",
+              "9:00 / 12:30",
+              "Anagni",
+              "Museo Archeologico Ernico: Un Viaggio nel Passato di Anagni"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                CultureFourDetailScreen(
+                  imageUrl: Assets.images.culture3Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageAdventureStack(
+              context,
+              Assets.images.culture3Image,
+              "Museo della Cattedrale Di Anagni",
+              "9:00 / 18:00",
+              "Anagni",
+              "Tesori d’Arte e Fede: Esplora il Museo della Cattedrale di Anagni"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                CultureFiveDetailScreen(
+                  imageUrl: Assets.images.culture4Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageAdventureStack(
+              context,
+              Assets.images.culture4Image,
+              "Museo Della Civiltà Contadina E dell'Ulivo",
+              "9:00 / 18:00",
+              "Pastena",
+              "Scopri le Radici Rurali e l’Eredità dell’Ulivo al Museo della Civiltà Contadina e dell’Ulivo a Pastena"),
+        ),
+        GestureDetector(
+          onTap: () {
+            Get.to(
+                CultureSixDetailScreen(
+                  imageUrl: Assets.images.culture5Image,
+                ),
+                transition: Transition.downToUp);
+          },
+          child: customImageAdventureStack(
+              context,
+              Assets.images.culture5Image,
+              "Museo Gente di Ciociaria",
+              "Attualmente Chiuso",
+              "Arce",
+              "Dalle Radici Agli Orizzonti: Scopri il Museo Gente di Ciociaria e la Vita nel Basso Lazio"),
+        )
       ],
     );
   }

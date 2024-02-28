@@ -45,6 +45,7 @@ dependencies:
   flutter_screenutil: ^5.7.0
   flutter_animation_progress_bar: ^2.3.1
   percent_indicator: ^4.2.3
+  url_launcher: ^6.2.5
 
   #--- For SVG Assets Rendering ---
   flutter_svg:

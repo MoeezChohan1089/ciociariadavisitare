@@ -37,4 +37,7 @@ class AppColors {
   static const Color blackColor = Color(0xff000000);
   static const Color subTitleColor = Color(0xff1776BA);
   static const Color backgroundColor = Color(0xffF0F5FF);
+  static const Color appTextColor = Color(0xff555555);
+  static const Color textFieldBGColor = Color(0xffF7F7F7);
+  static const Color appPriceRedColor = Color(0xffFF0000);
 }

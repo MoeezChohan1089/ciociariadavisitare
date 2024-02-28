@@ -54,6 +54,11 @@ class _ImageAssets {
   final String route5Image = "assets/images/routes5.jpeg";
   final String route6Image = "assets/images/routes6.jpeg";
   final String route7Image = "assets/images/routes7.jpeg";
+  final String routeDetailImage = "assets/images/routesDetail1.jpg";
+  final String routeDetail1Image = "assets/images/routeDetails2.jpeg";
+  final String routeDetail2Image = "assets/images/routedetails3.jpeg";
+  final String routeDetail3Image = "assets/images/routeDetails4.jpeg";
+  final String routeDetail4Image = "assets/images/routeDetails5.jpeg";
 }
 
 //
@@ -86,6 +91,15 @@ class _IconAssets {
   final String warningRoadIcon = "assets/icons/Warning Road Sign.svg";
   final String nationalHighwayIcon = "assets/icons/NationalHighway.svg";
   final String noImageIcon = "assets/icons/no-image-icon.svg";
+  final String arViewIcon = "assets/icons/Group 118.svg";
+  final String personIcon = "assets/icons/Group 65.svg";
+  final String timerIcon = "assets/icons/Group 66.svg";
+  final String locationPinIcon = "assets/icons/Group 57.svg";
+  final String contactUsIcon = "assets/icons/Group 75.svg";
+  final String rateUsIcon = "assets/icons/Group 121.svg";
+  final String shareAppIcon = "assets/icons/Group 122.svg";
+  final String privacyPolicyIcon = "assets/icons/Group 82.svg";
+  final String contactScreenIcon = "assets/icons/Group 105.svg";
 
   //--------- Dynamic Icons Selection
   //---- Cart

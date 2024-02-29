@@ -10,6 +10,7 @@ class BottomNavigationLogic extends GetxController {
 
   final advancedDrawerController = AdvancedDrawerController();
   final GlobalKey<ScaffoldState> navScaffoldKey = GlobalKey();
+  RxBool isProcessing = false.obs;
 
   RxInt currentPageIndex = 0.obs;
   RxBool isFancyDrawer = true.obs; //---- 1 for fancy 2 for Simple

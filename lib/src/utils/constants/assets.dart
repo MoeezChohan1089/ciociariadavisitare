@@ -11,7 +11,7 @@ class _ImageAssets {
   final String appLogo = "assets/images/1.png";
 
   final String welcomeBackground = "assets/images/background.jpg";
-  final String splashBackgroundImage = "assets/images/splash.jpeg";
+  final String splashBackgroundImage = "assets/images/Group 124.png";
   final String cycleImage = "assets/images/cycle.png";
   final String studyImage = "assets/images/girlTrack.jpeg";
   final String girlTrackImage = "assets/images/study.jpeg";
@@ -59,6 +59,7 @@ class _ImageAssets {
   final String routeDetail2Image = "assets/images/routedetails3.jpeg";
   final String routeDetail3Image = "assets/images/routeDetails4.jpeg";
   final String routeDetail4Image = "assets/images/routeDetails5.jpeg";
+  final String splashIconImage = "assets/images/Group 123.png";
 }
 
 //

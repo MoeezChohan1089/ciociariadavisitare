@@ -3,6 +3,7 @@ import 'package:ciociariadavisitare/src/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 import '../utils/constants/colors.dart';
 
@@ -17,6 +18,7 @@ class CustomButton extends StatelessWidget {
       this.loading = false,
       this.marginFromSide = false,
       this.isDisable = false,
+      this.isProcessing = false,
       this.borderSide,
       this.fontSize = 14,
       super.key});
@@ -30,6 +32,7 @@ class CustomButton extends StatelessWidget {
   double? width;
   final bool marginFromSide;
   final bool isDisable;
+  final bool isProcessing;
   double fontSize;
   BorderSide? borderSide;
   @override
@@ -58,13 +61,18 @@ class CustomButton extends StatelessWidget {
                 if (!loading) onTap();
               },
         child: Center(
-          child: Text(
-            text,
-            style: context.text.bodyMedium?.copyWith(
-              fontSize: fontSize.sp,
-              color: textColor ?? AppColors.customWhiteTextColor,
-            ),
-          ),
+          child: isProcessing
+              ? SpinKitThreeBounce(
+                  color: AppColors.customWhiteTextColor,
+                  size: 22.sp,
+                )
+              : Text(
+                  text,
+                  style: context.text.bodyMedium?.copyWith(
+                    fontSize: fontSize.sp,
+                    color: textColor ?? AppColors.customWhiteTextColor,
+                  ),
+                ),
         ),
       ),
     );

@@ -66,67 +66,66 @@ class _SplashPageState extends State<SplashPage> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Opacity(
-            opacity: 0.4,
-            child: Image.asset(
-              Assets.images.splashBackgroundImage,
-              fit: BoxFit.cover,
-            ),
+          Image.asset(
+            Assets.images.splashBackgroundImage,
+            fit: BoxFit.cover,
           ),
           Align(
             alignment: Alignment.center,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SvgPicture.asset(Assets.icons.compulsoryRoadSign),
-                SizedBox(height: 10.h),
-                Text(
-                  "Ciociaria Da Visitare",
-                  style: TextStyle(
-                    color: AppColors.customWhiteTextColor,
-                    fontSize: 24.sp,
-                  ),
-                ),
+                Image.asset(Assets.images.splashIconImage),
+                // SizedBox(height: 10.h),
+                // Text(
+                //   "Ciociaria Da Visitare",
+                //   style: TextStyle(
+                //     color: AppColors.customWhiteTextColor,
+                //     fontSize: 24.sp,
+                //   ),
+                // ),
               ],
             ),
           ),
           Positioned(
             left: 0,
             right: 0,
-            bottom: 50.h, // Adjust the positioning as per the design
-            child: Padding(
-              padding:
-                  EdgeInsets.symmetric(horizontal: pageMarginHorizontal * 2),
-              child: Column(
-                children: [
-                  // FAProgressBar(
-                  //   currentValue: progress,
-                  //   size: 14.h,
-                  //   borderRadius: BorderRadius.circular(100.r),
-                  //   displayText: '%',
-                  //   displayTextStyle:
-                  //       TextStyle(fontSize: 10.sp, color: Colors.white),
-                  //   progressColor: Colors.blue.shade600,
-                  //   backgroundColor: Colors.grey.shade200,
-                  // ),
-                  SizedBox(
-                    height: 10.h,
-                    child: LinearProgressIndicator(
-                      value: progress,
-                      backgroundColor: Colors.grey[200],
-                      valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
-                      borderRadius: BorderRadius.circular(10.r),
+            bottom: 0.h, // Adjust the positioning as per the design
+            child: SafeArea(
+              child: Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: pageMarginHorizontal * 2),
+                child: Column(
+                  children: [
+                    // FAProgressBar(
+                    //   currentValue: progress,
+                    //   size: 14.h,
+                    //   borderRadius: BorderRadius.circular(100.r),
+                    //   displayText: '%',
+                    //   displayTextStyle:
+                    //       TextStyle(fontSize: 10.sp, color: Colors.white),
+                    //   progressColor: Colors.blue.shade600,
+                    //   backgroundColor: Colors.grey.shade200,
+                    // ),
+                    SizedBox(
+                      height: 10.h,
+                      child: LinearProgressIndicator(
+                        value: progress,
+                        backgroundColor: Colors.grey[200],
+                        valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+                        borderRadius: BorderRadius.circular(10.r),
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 6.h),
-                  Text(
-                    "Loading",
-                    style: TextStyle(
-                      color: AppColors.customWhiteTextColor,
-                      fontSize: 14.sp,
+                    SizedBox(height: 6.h),
+                    Text(
+                      "Loading",
+                      style: TextStyle(
+                        color: AppColors.customWhiteTextColor,
+                        fontSize: 14.sp,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

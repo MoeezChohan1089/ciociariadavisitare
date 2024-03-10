@@ -1,0 +1,1 @@
+ G:\\flutter\ project\\latest\\ciociariadavisitare\\.dart_tool\\flutter_build\\6eb9e678e64170e421d7e1fab3c8612c\\native_assets.yaml: 

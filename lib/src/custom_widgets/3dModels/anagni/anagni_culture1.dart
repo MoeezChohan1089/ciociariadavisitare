@@ -1,68 +1,72 @@
+import 'package:ciociariadavisitare/src/custom_widgets/custom_app_bar.dart';
+import 'package:ciociariadavisitare/src/utils/extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:maedrix_ar_flutter_plugin/ar_flutter_plugin.dart';
-import 'package:maedrix_ar_flutter_plugin/datatypes/node_types.dart';
-import 'package:maedrix_ar_flutter_plugin/managers/ar_object_manager.dart';
-import 'package:maedrix_ar_flutter_plugin/managers/ar_session_manager.dart';
-import 'package:maedrix_ar_flutter_plugin/models/ar_node.dart';
-import 'package:vector_math/vector_math_64.dart' as vector;
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:model_viewer_plus/model_viewer_plus.dart';
 
-class ARViewExample extends StatefulWidget {
+class ModelViewerPage extends StatefulWidget {
+  const ModelViewerPage({super.key});
+
   @override
-  _ARViewExampleState createState() => _ARViewExampleState();
+  State<ModelViewerPage> createState() => _ModelViewerPageState();
 }
 
-class _ARViewExampleState extends State<ARViewExample> {
-  ARSessionManager? _arSessionManager;
-  ARObjectManager? _arObjectManager;
+class _ModelViewerPageState extends State<ModelViewerPage> {
+  String js = '''
+(() => {
+  const modelViewer = document.querySelector('#orbit-demo');
+  const orbitCycle = [
+    '45deg 55deg 4m',
+    '-60deg 110deg 2m',
+    modelViewer.cameraOrbit
+  ];
+
+  setInterval(() => {
+    const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
+    modelViewer.cameraOrbit =
+        orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
+  }, 3000);
+})();
+''';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AR View Example'),
+        backgroundColor: Colors.white,
+        title: Text(
+          "Anteprima",
+          style: context.text.titleMedium?.copyWith(fontSize: 16.sp),
+        ),
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icon(
+            Icons.arrow_back_ios,
+            size: 18.sp,
+          ),
+        ),
       ),
-      body: ARView(
-        onARViewCreated: _onARViewCreated,
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.only(bottom: 35.h),
+          child: ModelViewer(
+            interpolationDecay: 200,
+            backgroundColor: Colors.white,
+            src: 'assets/models/anagni_cathedral2.glb',
+            alt: 'A 3D model of an anagni cathedral',
+            ar: true,
+            arModes: const ['scene-viewer', 'webxr', 'quick-look'],
+            autoRotate: true,
+            iosSrc: 'assets/models/anagni_cathedral2.glb',
+            //     'https://modelviewer.dev/shared-assets/models/Astronaut.usdz',
+            disableZoom: false,
+            relatedJs: js,
+          ),
+        ),
       ),
     );
-  }
-
-  void _onARViewCreated(arSessionManager, ARObjectManager, ARAnchorManager, ARLocationManager) {
-    _arSessionManager = arSessionManager;
-
-    _arSessionManager!.onInitialize(
-      showFeaturePoints: true,
-      showPlanes: true,
-      customPlaneTexturePath: "assets/images/plane_texture.png",
-      showWorldOrigin: true,
-    );
-
-    _loadSampleObject();
-  }
-
-  Future<void> _loadSampleObject() async {
-    // Assuming you have a 3D model or a simple object you want to display
-    // This could be a local asset or a remote asset
-    // Make sure to adjust parameters (e.g., scale, position) based on your object
-    var newNode = ARNode(
-      type: NodeType.webGLB,
-      uri: "assets/models/anagni_cathedral2.glb",
-      scale: vector.Vector3.all(0.5),
-      position: vector.Vector3(0, 0, -1),
-      rotation: vector.Vector4(0, 0, 0, 1),
-    );
-
-    bool? didAddNode = await _arObjectManager!.addNode(newNode);
-    if (didAddNode == true) {
-      print("Successfully added the node to the AR scene");
-    } else {
-      print("Failed to add the node to the AR scene");
-    }
-  }
-
-  @override
-  void dispose() {
-    _arSessionManager?.dispose();
-    super.dispose();
   }
 }

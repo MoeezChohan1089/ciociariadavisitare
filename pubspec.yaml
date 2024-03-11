@@ -54,7 +54,7 @@ dependencies:
   shimmer: ^3.0.0
   #----- WebView for Checkout-----
   webview_flutter: ^4.2.2
-  maedrix_ar_flutter_plugin: ^0.7.9
+  model_viewer_plus: ^1.7.0
   intl: ^0.18.0
   carousel_slider: ^4.2.1
 
@@ -99,6 +99,7 @@ flutter:
    - assets/icons/
    - assets/images/
    - assets/models/
+   - assets/models/anagni_cathedral2.glb
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

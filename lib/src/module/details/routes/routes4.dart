@@ -9,6 +9,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../custom_widgets/3dModels/monte/monte_cacume.dart';
 import '../../contact/contact_us.dart';
 
 class RouteFourDetailScreen extends StatelessWidget {
@@ -89,15 +90,20 @@ class RouteFourDetailScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Container(
-                              // width: double.maxFinite,
-                              padding: EdgeInsets.all(12),
-                              decoration: BoxDecoration(
-                                  color: AppColors.customWhiteTextColor,
-                                  shape: BoxShape.circle),
-                              child: SvgPicture.asset(
-                                Assets.icons.arViewIcon,
-                                width: 24.w,
+                            GestureDetector(
+                              onTap: () {
+                                Get.to(const ModelViewer2Page());
+                              },
+                              child: Container(
+                                // width: double.maxFinite,
+                                padding: EdgeInsets.all(12),
+                                decoration: BoxDecoration(
+                                    color: AppColors.customWhiteTextColor,
+                                    shape: BoxShape.circle),
+                                child: SvgPicture.asset(
+                                  Assets.icons.arViewIcon,
+                                  width: 24.w,
+                                ),
                               ),
                             ),
                           ],

@@ -9,6 +9,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../custom_widgets/3dModels/anagni/anagni_culture1.dart';
 import '../../contact/contact_us.dart';
 
 class CultureFourDetailScreen extends StatelessWidget {
@@ -89,15 +90,24 @@ class CultureFourDetailScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Container(
-                              // width: double.maxFinite,
-                              padding: EdgeInsets.all(12),
-                              decoration: BoxDecoration(
-                                  color: AppColors.customWhiteTextColor,
-                                  shape: BoxShape.circle),
-                              child: SvgPicture.asset(
-                                Assets.icons.arViewIcon,
-                                width: 24.w,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ModelViewerPage()));
+                              },
+                              child: Container(
+                                // width: double.maxFinite,
+                                padding: EdgeInsets.all(12),
+                                decoration: BoxDecoration(
+                                    color: AppColors.customWhiteTextColor,
+                                    shape: BoxShape.circle),
+                                child: SvgPicture.asset(
+                                  Assets.icons.arViewIcon,
+                                  width: 24.w,
+                                ),
                               ),
                             ),
                           ],

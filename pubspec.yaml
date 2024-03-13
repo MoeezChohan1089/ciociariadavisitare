@@ -100,6 +100,7 @@ flutter:
    - assets/images/
    - assets/models/
    - assets/models/anagni_cathedral2.glb
+   - assets/models/MonteCacume.glb
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

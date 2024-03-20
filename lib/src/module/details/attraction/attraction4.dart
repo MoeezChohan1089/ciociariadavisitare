@@ -89,17 +89,18 @@ class AttractionFourDetailScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Container(
-                              // width: double.maxFinite,
-                              padding: EdgeInsets.all(12),
-                              decoration: BoxDecoration(
-                                  color: AppColors.customWhiteTextColor,
-                                  shape: BoxShape.circle),
-                              child: SvgPicture.asset(
-                                Assets.icons.arViewIcon,
-                                width: 24.w,
-                              ),
-                            ),
+                            SizedBox(),
+                            // Container(
+                            //   // width: double.maxFinite,
+                            //   padding: EdgeInsets.all(12),
+                            //   decoration: BoxDecoration(
+                            //       color: AppColors.customWhiteTextColor,
+                            //       shape: BoxShape.circle),
+                            //   child: SvgPicture.asset(
+                            //     Assets.icons.arViewIcon,
+                            //     width: 24.w,
+                            //   ),
+                            // ),
                           ],
                         ),
                       ],

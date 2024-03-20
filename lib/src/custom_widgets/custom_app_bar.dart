@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:ciociariadavisitare/src/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,7 +32,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         backgroundColor: AppColors.backgroundColor,
         scrolledUnderElevation: 0,
-        leading: null,
+        // automaticallyImplyLeading: false,
+        // leading: null,
+        centerTitle: false,
+        automaticallyImplyLeading: false,
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,

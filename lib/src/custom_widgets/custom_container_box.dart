@@ -8,7 +8,7 @@ import '../utils/constants/colors.dart';
 customContainerPercentageBox(
     BuildContext context, String percentage, String title) {
   return Container(
-    padding: EdgeInsets.symmetric(vertical: 12.h),
+    padding: EdgeInsets.symmetric(vertical: 10.h),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(8.r),
       color: AppColors.customWhiteTextColor,
@@ -26,7 +26,7 @@ customContainerPercentageBox(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CircularPercentIndicator(
-          radius: 53.r,
+          radius: 50.r,
           lineWidth: 12.0,
           percent: 0.85,
           center: Text(
@@ -43,7 +43,7 @@ customContainerPercentageBox(
           style: context.text.bodyMedium?.copyWith(
               color: AppColors.blackColor,
               height: 1.2,
-              fontSize: 16.sp,
+              fontSize: 14.sp,
               fontWeight: FontWeight.w600),
         ),
       ],

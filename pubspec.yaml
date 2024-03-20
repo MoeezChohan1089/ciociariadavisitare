@@ -57,7 +57,10 @@ dependencies:
   model_viewer_plus: ^1.7.0
   intl: ^0.18.0
   carousel_slider: ^4.2.1
-
+  arkit_plugin: ^1.0.7
+  vector_math:
+  dio:
+  path_provider:
   #------ For Saving Data Locally ------
   get_storage: ^2.1.1
 
@@ -101,6 +104,9 @@ flutter:
    - assets/models/
    - assets/models/anagni_cathedral2.glb
    - assets/models/MonteCacume.glb
+   - assets/models/Castello.glb
+   - assets/models/GrotteDiCollepardo.glb
+   - assets/models/MuraCiclopiche.glb
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

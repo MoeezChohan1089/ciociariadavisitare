@@ -98,7 +98,7 @@ class _MuraCiclopichoModelViewerPageState
 
   void onARKitViewCreated(ARKitController arkitController) {
     this.arkitController = arkitController;
-    final node = _getNodeFromFlutterAsset(0.8);
+    final node = _getNodeFromFlutterAsset(0.3);
     this.arkitController.add(node);
   }
 
